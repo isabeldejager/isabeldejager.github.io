@@ -1,34 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Learning HTML Features</title>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="my_w3.css">
+<title>Slideshow</title>
+</head>
 <style>
-.top_style img {
-  height: 17em;
-  width: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
 
-h1 {
+.w3-badge {cursor:pointer;height:18px;width:18px;padding:0}
 
-  background-color: orange;
+img {
+  max-width: 500px;
+  max-height: 400px;
 }
 </style>
-</head>
 <body>
-<div class="w3-display-container top_style">
-  <!--<div class="top_style">-->
-  <img src="topimg6.png" alt="golden tree"/>
-   <div class="w3-display-middle w3-container"><h1>Go FAR - Lorem Ipsum Dolor Sit Amet</h1></div>
-  <!--</div>-->
-</div>
-<!--<img src="topimg.png" alt="decorative image of a golden colored tree" style="width:100%">-->
-<footer class="w3-container w3-teal">
-  <p>My footer information</p>
-</footer>
+<div class="w3-content w3-display-container w3-card-4 slideshow-container">
+  <img class="w3-content slides" src="img/s1.jpg" alt=""/>
+  <img class="w3-content slides" src="img/s2.jpg" alt=""/>
+  <img class="w3-content slides" src="img/s3.jpg" alt=""/>
+  
+  <div class="w3-display-bottommiddle w3-xxlarge" style="width:80%">
+    <a class="w3-btn w3-black w3-left prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="w3-btn w3-black w3-right next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br/> 
+  <br/>
+  <br/>
+  <div class="w3-display-bottommiddle">
+    <span class="w3-badge dot w3-border-grey w3-bottombar w3-leftbar w3-rightbar w3-topbar  w3-white w3-hover-border-black" onclick="currentSlide(1)"></span>
+    <span class="w3-badge dot w3-border-grey w3-bottombar w3-leftbar w3-rightbar w3-topbar  w3-white w3-hover-border-black" onclick="currentSlide(2)"></span>
+    <span class="w3-badge dot w3-border-grey w3-bottombar w3-leftbar w3-rightbar w3-topbar  w3-white w3-hover-border-black" onclick="currentSlide(3)"></span>
+
+<script type="text/javascript">
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex+=n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex=n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" w3-border-black", " w3-border-grey");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className = dots[slideIndex-1].className.replace(" w3-border-grey", "");
+    dots[slideIndex-1].className+= " w3-border-black";
+  }
+</script>
+
+</script>
 </body>
-</html> 
+</html>
