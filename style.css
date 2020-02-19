@@ -1,0 +1,69 @@
+body {
+  background: #d2d3fc;
+}
+
+.logo-img {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: -0.25rem;
+}
+
+.logo-text {
+  font-family: 'Lemonada', cursive;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: black;
+}
+
+#top_bar .nav-link {
+  color: black;
+  font-size: 1.2rem;
+  font-family: 'Sriracha', cursive;
+  font-weight: 700;
+  font-style: italic;
+}
+
+#top_bar .nav-link:hover {
+  background-color: #00008B;
+  border: none;
+  color: white;
+  padding: 2px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.position-top {
+
+}
+
+.blurb {
+
+}
+
+.blurb h2 {
+  font-family: 'Sriracha', cursive;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #00008B;
+}
+
+.blurb p {
+  font-weight: 400;
+  color: #00008B;
+  font-style: italic;
+  line-height: 2rem;
+}
+
+.small-img {
+  width: 10%;
+  height: auto;
+}
+
+.flip-img {
+  transform: scaleX(-1);
+}

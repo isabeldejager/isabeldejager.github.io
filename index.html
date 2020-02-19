@@ -1,68 +1,117 @@
 <!DOCTYPE html>
-<html lang="en-US">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="my_w3.css">
-<title>Slideshow</title>
-</head>
-<style>
-
-.w3-badge {cursor:pointer;height:18px;width:18px;padding:0}
-
-img {
-  max-width: 500px;
-  max-height: 400px;
-}
-</style>
-<body>
-<div class="w3-content w3-display-container w3-card-4 slideshow-container">
-  <img class="w3-content slides" src="img/s1.jpg" alt=""/>
-  <img class="w3-content slides" src="img/s2.jpg" alt=""/>
-  <img class="w3-content slides" src="img/s3.jpg" alt=""/>
-  
-  <div class="w3-display-bottommiddle w3-xxlarge" style="width:80%">
-    <a class="w3-btn w3-black w3-left prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="w3-btn w3-black w3-right next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br/> 
-  <br/>
-  <br/>
-  <div class="w3-display-bottommiddle">
-    <span class="w3-badge dot w3-border-grey w3-bottombar w3-leftbar w3-rightbar w3-topbar  w3-white w3-hover-border-black" onclick="currentSlide(1)"></span>
-    <span class="w3-badge dot w3-border-grey w3-bottombar w3-leftbar w3-rightbar w3-topbar  w3-white w3-hover-border-black" onclick="currentSlide(2)"></span>
-    <span class="w3-badge dot w3-border-grey w3-bottombar w3-leftbar w3-rightbar w3-topbar  w3-white w3-hover-border-black" onclick="currentSlide(3)"></span>
-
-<script type="text/javascript">
-  var slideIndex = 1;
-  showSlides(slideIndex);
-  
-  function plusSlides(n) {
-    showSlides(slideIndex+=n);
-  }
-  
-  function currentSlide(n) {
-    showSlides(slideIndex=n);
-  }
-  
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("slides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1; }
-    if (n < 1) { slideIndex = slides.length; }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" w3-border-black", " w3-border-grey");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className = dots[slideIndex-1].className.replace(" w3-border-grey", "");
-    dots[slideIndex-1].className+= " w3-border-black";
-  }
-</script>
-
-</script>
-</body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Stationary Shop</title>
+    <link href="https://fonts.googleapis.com/css?family=Lemonada:400,700|Sriracha|Calligraffitti&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav id="top_bar" class="navbar navbar-light bg-warning navbar-expand-md py-0 fixed-top">
+      <span class="navbar-brand ml-2 mr-5 logo-text"><img src="star_logo.png" class="mr-1 logo-img">CREATE</span>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-lable="toggle navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLinks">
+        <ul class="navbar-nav">
+          <li class="nav-item ml-3 mr-4">
+            <a class="nav-link custom-text custom-link" href="#">HOME</a>
+          </li>
+          <li class="nav-item ml-3">
+            <a class="nav-link custom-text custom-link" href="#">ABOUT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="container-fluid">
+    <article>
+      <div class="row my-2 my-md-1">
+        <div class="col-lg-6 p-0">
+          <img class="img-fluid" src="images/woorde1.png" alt="Decorative word art">
+        </div>
+        <div class="col-lg-6 d-none d-lg-block p-0">
+          <img class="img-fluid" src="images/writing.jpg" alt="decorative image of someone writing on paper">
+        </div>
+      </div>
+    </article>
+    <article class="blurb">
+      <div class="row text-center align-items-center my-2 my-md-1">
+        <div class="col-md-6 p-0">
+          <img src="images/paint_brush.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="col-md-6 p-0">
+          <div class="row justify-content-center">
+            <div class="col-10 col-lg-8 p-0">
+              <h2 class="my-3 my-md-0">Anyone Can Be An Artist</h2>
+              <img src="images/icon_flower.png" alt="decorative icon of a dangelion flower" class="d-none d-lg-inline small-img flip-img">
+              <p class="lead">Enjoy the fun of putting your thoughts on paper. You only need a thing here and there to jot it out. Maybe a paper or maybe not, or just an old piece of something can sometimes do. Pick up a pen or a brush or a scissor or ruler. Do a bit of planning and start with your artistic creation. Yes, grab what you need, be it a little or be it a lot, and make your artwork complete.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <atricle class="blurb">
+      <div class="row text-center align-items-center my-2 my-md-1">
+        <div class="col-md-6 order-2 order-md-1 p-0">
+          <div class="row justify-content-center">
+            <div class="col-10 col-lg-8 p-0">
+              <h2 class="my-3 my-md-0">From Silly to Serious</h2>
+              <img src="images/icon_flower.png" alt="decorative icon of a dangelion flower" class="d-none d-lg-inline small-img">
+              <p class="lead">Because there is also a propper time to be serious, you can take out your pens. With a pen in the hand you will now be prepared to switch an your brains logical thingking part. And so the outlining can easily start. Just remember the planning should be every bit as enjoyable as the event itself.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 order-1 order-md-2 p-0">
+          <img src="images/bundled.jpg" alt="" class="img-fluid">
+        </div>
+      </div>
+    </article>
+    <article class="blurb">
+      <div class="row text-center align-items-center my-2 my-md-1">
+        <div class="col-md-6 p-0">
+          <img src="images/bottle.jpg" alt="" class="img-fluid flip-img">
+        </div>
+        <div class="col-md-6 p-0">
+          <div class="row justify-content-center">
+            <div class="col-10 col-lg-8 p-0">
+              <h2 class="my-3 my-md-0">Simply Organize</h2>
+              <img src="images/icon_flower.png" alt="decorative icon of a dangelion flower" class="d-none d-lg-inline small-img flip-img">
+              <p class="lead">Don't just exists be prepared with a plan. Equip yourself for daily life situations. Now you will possess super human strengths and you will be able to sing and Waltz through every new day.</p>
+              <blockquote class="blockquote">
+              <p class="mb-0">For every minute spent organizing, an hour is earned</p>
+              <footer class="blockquote-footer">Benjamin Franklin</footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <atricle class="blurb">
+      <div class="row text-center align-items-center my-2 my-md-1">
+        <div class="col-md-6 order-2 order-md-1 p-0">
+          <div class="row justify-content-center">
+            <div class="col-10 col-lg-8 p-0">
+              <h2 class="my-3 my-md-0">The Journey</h2>
+              <img src="images/icon_flower.png" alt="decorative icon of a dangelion flower" class="d-none d-lg-inline small-img">
+              <blockquote class="blockquote">
+              <p class="mb-0">Anyone who has never made a mistake has never tried anything new</p>
+              <footer class="blockquote-footer">Albert Enstein</footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 order-1 order-md-2 p-0">
+          <img src="images/new_adventure.jpg" alt="" class="img-fluid">
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="container-fluid bg-dark text-center p-4">
+    <span class="logo-text ml-2 mr-5" style="color: white;"><img src="star_logo.png" class="mr-1 logo-img">CREATE</span>
+  </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
 </html>
